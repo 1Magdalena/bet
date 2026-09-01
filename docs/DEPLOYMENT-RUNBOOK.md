@@ -33,3 +33,15 @@ Before charging money: register the operating entity if required for the chosen 
 - Application rollback: redeploy previous immutable build.
 - Database rollback: prefer forward-fix migrations. For destructive incident recovery, restore a tested backup to a new database and switch connection only after verification.
 - Never run destructive schema commands manually in production without a backup and reviewed migration.
+
+## Supabase GitHub integration (current provider choice)
+
+For the connected `1Magdalena/bet` repository, use repository root as the working directory (`.`). The root contains `supabase/migrations/`, which is the deployable Supabase migration path.
+
+Before an intentional production migration from `main`:
+
+1. Confirm no secrets are present in the commit.
+2. Confirm `db/migrations/0001_core.sql` matches `supabase/migrations/0001_core.sql`.
+3. Confirm `db/migrations/0002_functions.sql` matches `supabase/migrations/0002_functions.sql`.
+4. Review `supabase/migrations/0003_rls.sql` for provider-specific RLS.
+5. Deploy only after the target project and branch are confirmed.
