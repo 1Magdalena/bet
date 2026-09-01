@@ -1,0 +1,15 @@
+{
+  "name": "bet-production-skeleton",
+  "private": true,
+  "version": "0.1.0",
+  "description": "BET modular-monolith production skeleton",
+  "workspaces": ["apps/api"],
+  "scripts": {
+    "dev:api": "npm --workspace apps/api run dev",
+    "build": "npm --workspace apps/api run build",
+    "typecheck": "npm --workspace apps/api run typecheck",
+    "test": "npm --workspace apps/api run test",
+    "lint:config": "node scripts/validate-config.mjs",
+    "check": "npm run lint:config && npm run typecheck && npm run test"
+  }
+}

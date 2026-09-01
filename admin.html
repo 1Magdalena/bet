@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BET Admin — Members</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell" style="max-width:1180px;margin:0 auto;padding:32px 20px;">
+    <div class="eyebrow">BET ADMIN · RESTRICTED</div>
+    <h1>Members</h1>
+    <p class="lede">Operational member directory. This screen is admin-only and must be protected by server-side authorization and MFA in production.</p>
+    <div class="panel" style="overflow:auto;">
+      <table style="width:100%;border-collapse:collapse;min-width:900px;">
+        <thead><tr style="text-align:left;border-bottom:1px solid var(--line,#ddd);"><th>Member</th><th>Email</th><th>Business</th><th>Verification</th><th>Access</th><th>Onboarding</th><th>Joined</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line,#eee);"><td>Example member</td><td>member@example.com</td><td>Example Business</td><td>Pending</td><td>Launch full access</td><td>Completed</td><td>Sep 1, 2026</td><td>Active</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="margin-top:16px;">Prototype only. Real rows must come from the canonical PostgreSQL database through an authenticated admin API. Never expose this table from static frontend data.</p>
+  </main>
+</body>
+</html>
