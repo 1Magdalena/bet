@@ -17,3 +17,7 @@ Supabase project settings for BET:
 - Automatic RLS for new public tables: enabled
 
 Do not commit database passwords, service-role keys, access tokens, or other production secrets.
+
+- `migrations/0004_owner_analytics_consent_billing.sql` — owner telemetry, consent and canonical billing ledger.
+- `migrations/0005_member_origin_admin_filters.sql` — signup origin and owner filters.
+- `migrations/0006_owner_analytics_rls.sql` — Supabase-only RLS for the new owner/analytics tables.

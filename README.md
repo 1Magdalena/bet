@@ -18,6 +18,8 @@ This is the current canonical production-preparation repository for BET. It cont
 - Notifications and problem-context conversations
 - Private Notes boundary
 - Technical Support and human escalation
+- Owner Control Center: users, countries, activity, filters, product/database operations and future revenue
+- Consent preferences and first-party active-time analytics (opt-in)
 - Admin list and verification queue
 - Durable PostgreSQL job queue
 - Provider boundaries for AI, auth, storage, transcription and email
@@ -44,6 +46,9 @@ The production migration order is:
 1. `supabase/migrations/0001_core.sql`
 2. `supabase/migrations/0002_functions.sql`
 3. `supabase/migrations/0003_rls.sql`
+4. `supabase/migrations/0004_owner_analytics_consent_billing.sql`
+5. `supabase/migrations/0005_member_origin_admin_filters.sql`
+6. `supabase/migrations/0006_owner_analytics_rls.sql`
 
 ## What still requires owner-authorized external services
 
@@ -80,3 +85,7 @@ Environment template:
 Deployment instructions:
 
 `docs/DEPLOYMENT-RUNBOOK.md`
+
+
+## Owner filters v0.3
+The Owner Control Center now supports composable filters for signup country, payment state, plan, activity, verification, business geography/status and acquisition source, plus selectable visible columns. Apply `supabase/migrations/0005_member_origin_admin_filters.sql` after the existing 0001-0004 migrations.

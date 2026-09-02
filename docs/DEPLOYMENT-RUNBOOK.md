@@ -8,7 +8,7 @@
 ## Phase 1 — staging
 Owner actions are listed separately in `OWNER-ACTIONS.md`. Once PostgreSQL/Auth/Storage credentials exist:
 1. Copy `.env.example` to a local secret store; fill staging values.
-2. Apply `db/migrations/0001_core.sql` then `0002_functions.sql`.
+2. Apply every file in `db/migrations/` in numeric order. On Supabase use every file in `supabase/migrations/` in numeric order; `0003_rls.sql` is provider-specific.
 3. Create a private media bucket.
 4. Configure auth/JWKS.
 5. Deploy API with `NODE_ENV=production` to staging and a staging origin.
@@ -42,6 +42,7 @@ Before an intentional production migration from `main`:
 
 1. Confirm no secrets are present in the commit.
 2. Confirm `db/migrations/0001_core.sql` matches `supabase/migrations/0001_core.sql`.
-3. Confirm `db/migrations/0002_functions.sql` matches `supabase/migrations/0002_functions.sql`.
+3. Run `npm run check:supabase-migrations` to verify every portable/provider mirror.
 4. Review `supabase/migrations/0003_rls.sql` for provider-specific RLS.
-5. Deploy only after the target project and branch are confirmed.
+5. Confirm consent defaults to necessary-only and product analytics remains off until opt-in.
+6. Deploy only after the target project and branch are confirmed.

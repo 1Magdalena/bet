@@ -22,3 +22,8 @@ The technical implementation should be completed by the build process wherever p
 - Update Terms/Privacy/billing disclosures and enable payment-safety messaging.
 
 The assistant/build process should stop and ask the owner only at these checkpoints or if a provider requires human verification/card/legal acceptance.
+
+## Before external beta — privacy/analytics owner actions
+- Approve final Privacy Policy, Cookie Notice and controller identity for actual launch jurisdictions.
+- Approve the exact cookie/storage inventory after production auth/analytics providers are chosen.
+- Confirm whether optional product analytics is enabled at beta launch; marketing tracking remains off unless separately approved.

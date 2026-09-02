@@ -18,6 +18,7 @@ import { registerQuestionRoutes } from '../modules/questions/routes.js';
 import { registerNotificationRoutes } from '../modules/notifications/routes.js';
 import { registerSupportRoutes } from '../modules/support/routes.js';
 import { registerAdminRoutes } from '../modules/admin/routes.js';
+import { registerAnalyticsRoutes } from '../modules/analytics/routes.js';
 
 export async function buildApp(env:Env,pool:DbPool,authProvider:AuthProvider,ai:AiProvider){
   const app=Fastify({logger:{level:env.LOG_LEVEL},trustProxy:true,bodyLimit:2_000_000,requestIdHeader:'x-request-id'});
@@ -43,6 +44,7 @@ export async function buildApp(env:Env,pool:DbPool,authProvider:AuthProvider,ai:
   await registerNoteRoutes(app,pool);
   await registerConversationRoutes(app,pool,env.FEATURE_GROUP_DISCUSSIONS);
   await registerProfileRoutes(app,pool);
+  await registerAnalyticsRoutes(app,pool);
   await registerAdminRoutes(app,pool);
   return app;
 }

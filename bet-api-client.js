@@ -29,7 +29,18 @@
     question:(id)=>request(`/v1/questions/${encodeURIComponent(id)}`),
     notifications:()=>request('/v1/notifications'),
     markNotificationRead:(id)=>request(`/v1/notifications/${encodeURIComponent(id)}/read`,{method:'POST'}),
+    getConsent:()=>request('/v1/me/consent'),
+    setConsent:(payload)=>request('/v1/me/consent',{method:'PUT',body:JSON.stringify(payload)}),
+    startActivitySession:()=>request('/v1/activity/session',{method:'POST'}),
+    activityEvent:(payload)=>request('/v1/activity/event',{method:'POST',body:JSON.stringify(payload)}),
+    activityHeartbeat:(payload)=>request('/v1/activity/heartbeat',{method:'POST',body:JSON.stringify(payload)}),
     supportChat:(message)=>request('/v1/support/chat',{method:'POST',body:JSON.stringify({message})}),
-    escalateSupport:(payload)=>request('/v1/support/escalate',{method:'POST',body:JSON.stringify(payload)})
+    escalateSupport:(payload)=>request('/v1/support/escalate',{method:'POST',body:JSON.stringify(payload)}),
+    adminOverview:(params={})=>request(`/v1/admin/overview?${new URLSearchParams(params)}`),
+    adminFilterOptions:()=>request('/v1/admin/filter-options'),
+    adminMembers:(params={})=>request(`/v1/admin/members?${new URLSearchParams(params)}`),
+    adminMember:(id)=>request(`/v1/admin/members/${encodeURIComponent(id)}`),
+    adminBillingSummary:(params={})=>request(`/v1/admin/billing-summary?${new URLSearchParams(params)}`),
+    adminDataSummary:(params={})=>request(`/v1/admin/data-summary?${new URLSearchParams(params)}`)
   };
 })();

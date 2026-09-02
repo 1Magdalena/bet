@@ -3,23 +3,79 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BET Admin — Members</title>
+  <title>BET Control Center</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .cc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}.cc-filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;align-items:end}.cc-filters label,.cc-columns label{display:grid;gap:6px;font-size:12px}.cc-filters select,.cc-filters input{width:100%;padding:10px;border:1px solid var(--line,#d8d0c7);background:transparent;border-radius:8px}.cc-columns{display:flex;flex-wrap:wrap;gap:12px 18px;padding-top:12px}.cc-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.cc-table{width:100%;border-collapse:collapse;min-width:1180px}.cc-table th,.cc-table td{padding:10px 8px;border-bottom:1px solid rgba(127,127,127,.18);white-space:nowrap;text-align:left}.cc-table th{font-size:12px}.cc-status{font-size:12px}.cc-error{color:#8d1d2c}.cc-hidden{display:none!important}
+  </style>
 </head>
 <body>
-  <main class="shell" style="max-width:1180px;margin:0 auto;padding:32px 20px;">
-    <div class="eyebrow">BET ADMIN · RESTRICTED</div>
-    <h1>Members</h1>
-    <p class="lede">Operational member directory. This screen is admin-only and must be protected by server-side authorization and MFA in production.</p>
-    <div class="panel" style="overflow:auto;">
-      <table style="width:100%;border-collapse:collapse;min-width:900px;">
-        <thead><tr style="text-align:left;border-bottom:1px solid var(--line,#ddd);"><th>Member</th><th>Email</th><th>Business</th><th>Verification</th><th>Access</th><th>Onboarding</th><th>Joined</th><th>Status</th></tr></thead>
-        <tbody>
-          <tr style="border-bottom:1px solid var(--line,#eee);"><td>Example member</td><td>member@example.com</td><td>Example Business</td><td>Pending</td><td>Launch full access</td><td>Completed</td><td>Sep 1, 2026</td><td>Active</td></tr>
-        </tbody>
-      </table>
+  <main class="shell" style="max-width:1320px;margin:0 auto;padding:32px 20px;">
+    <div class="eyebrow">BET CONTROL CENTER · OWNER ONLY</div>
+    <h1>BET at a glance</h1>
+    <p class="lede">Choose exactly what you want to see: growth, members, countries, activity, product data, operations and—when enabled—subscriptions and revenue.</p>
+
+    <section class="panel" style="margin:22px 0;">
+      <div class="cc-actions" style="margin-bottom:14px"><button data-range="today">Today</button><button data-range="7d">7D</button><button data-range="30d">30D</button><button data-range="month">Month</button><button data-range="year">Year</button><button data-range="custom">Custom range</button></div>
+      <div class="cc-filters">
+        <label>From<input id="from" type="date"></label>
+        <label>To<input id="to" type="date"></label>
+        <label>Signup country<select id="country"><option value="">All countries</option></select></label>
+        <label>Payment<select id="paymentStatus"><option value="all">All</option><option value="paid">Paid</option><option value="free">Free</option><option value="trial">Trial</option><option value="past_due">Past due</option><option value="cancelled">Cancelled</option></select></label>
+        <label>Plan<select id="plan"><option value="">All plans</option></select></label>
+        <label>Account<select id="accountStatus"><option value="">All</option><option>active</option><option>pending</option><option>hibernated</option><option>suspended</option><option>deletion_requested</option></select></label>
+        <label>Verification<select id="verificationStatus"><option value="">All</option><option>verified</option><option>pending_verification</option><option>verification_issue</option><option>rejected</option></select></label>
+        <label>Activity<select id="activity"><option value="all">All</option><option value="today">Active today</option><option value="7d">Active 7D</option><option value="30d">Active 30D</option><option value="inactive30d">Inactive 30D</option></select></label>
+        <label>Business country<select id="businessCountry"><option value="">All countries</option></select></label>
+        <label>Business status<select id="businessStatus"><option value="">All</option><option>current</option><option>former</option><option>sold</option><option>closed</option></select></label>
+        <label>Source<select id="acquisitionSource"><option value="">All sources</option></select></label>
+        <label>Sort<select id="sort"><option value="joined">Joined</option><option value="country">Country</option><option value="payment">Payment</option><option value="last_active">Last active</option><option value="sessions">Sessions</option><option value="active_time">Active time</option><option value="experiences">Experiences</option><option value="questions">Questions</option></select></label>
+      </div>
+      <div class="cc-actions" style="margin-top:14px"><button id="applyFilters">Apply filters</button><button id="clearFilters">Clear</button><span id="filterStatus" class="muted cc-status">Filters can be combined.</span></div>
+      <details style="margin-top:14px"><summary>Visible columns</summary><div id="columns" class="cc-columns"></div></details>
+    </section>
+
+    <div class="cc-grid">
+      <div class="panel"><div class="muted">Members</div><h2 id="metricMembers">—</h2><small>total / filtered view</small></div>
+      <div class="panel"><div class="muted">Active time</div><h2 id="metricActiveTime">—</h2><small>real active time, not open tabs</small></div>
+      <div class="panel"><div class="muted">Experiences</div><h2 id="metricExperiences">—</h2><small>created / active / outcomes</small></div>
+      <div class="panel"><div class="muted">Questions & matches</div><h2 id="metricMatches">—</h2><small>volume / qualified / zero-match</small></div>
+      <div class="panel"><div class="muted">Paid subscriptions</div><h2 id="metricPaid">—</h2><small>enabled with monetization</small></div>
+      <div class="panel"><div class="muted">Net collected</div><h2 id="metricNet">—</h2><small>gross − refunds − provider fees</small></div>
     </div>
-    <p class="muted" style="margin-top:16px;">Prototype only. Real rows must come from the canonical PostgreSQL database through an authenticated admin API. Never expose this table from static frontend data.</p>
+
+    <h2 style="margin-top:34px;">Members</h2>
+    <div class="panel" style="overflow:auto;">
+      <table id="memberTable" class="cc-table"><thead><tr id="memberHead"></tr></thead><tbody id="memberBody"><tr><td class="muted">Live data comes from the authenticated owner API.</td></tr></tbody></table>
+    </div>
+
+    <h2 style="margin-top:34px;">Data & operations</h2>
+    <div class="panel"><p id="opsData">Loading database summary…</p><p id="opsAttention">Loading operational attention items…</p><p class="muted">Detailed product records are deliberately retrieved by Member ID when needed. Private Notes are never visible here. Backup/restore health is supplied by infrastructure monitoring when connected.</p></div>
   </main>
-</body>
+  <script src="runtime-config.js"></script>
+  <script src="bet-api-client.js"></script>
+  <script>
+  (()=>{
+    const cols=[
+      ['id','Member ID',true],['created_at','Joined',true],['signup_country_code','Signup country',true],['primary_business','Business',true],['primary_business_country','Business country',false],['subscription_status','Payment',true],['plan_id','Plan',true],['account_status','Account',false],['last_active_at','Last active',true],['sessions_30d','Sessions 30D',true],['active_seconds_30d','Active time 30D',true],['active_days_30d','Active days 30D',false],['experience_count','Experiences',true],['question_count','Questions',false],['qualified_match_count','Qualified matches',false],['conversation_count','Conversations',false],['acquisition_source','Source',false],['acquisition_campaign','Campaign',false]
+    ];
+    const visible=new Set(cols.filter(c=>c[2]).map(c=>c[0]));
+    const $=id=>document.getElementById(id);
+    const fmt=(k,v)=>{if(v==null||v==='')return '—';if(k==='active_seconds_30d'){const h=Math.floor(Number(v)/3600),m=Math.floor((Number(v)%3600)/60);return h?`${h}h ${m}m`:`${m}m`;}if(k.endsWith('_at'))return new Date(v).toLocaleString();return String(v)};
+    function renderHead(){ $('memberHead').innerHTML=cols.filter(c=>visible.has(c[0])).map(c=>`<th data-col="${c[0]}">${c[1]}</th>`).join(''); }
+    function renderRows(rows){renderHead();$('memberBody').innerHTML=rows.length?rows.map(r=>`<tr>${cols.filter(c=>visible.has(c[0])).map(c=>`<td data-col="${c[0]}">${fmt(c[0],r[c[0]])}</td>`).join('')}</tr>`).join(''):'<tr><td class="muted">No members match these filters.</td></tr>';}
+    $('columns').innerHTML=cols.map(([k,label,on])=>`<label><span><input type="checkbox" data-column="${k}" ${on?'checked':''}> ${label}</span></label>`).join('');
+    $('columns').addEventListener('change',e=>{const k=e.target.dataset.column;if(!k)return;e.target.checked?visible.add(k):visible.delete(k);loadMembers();});
+    function iso(d){return d.toISOString().slice(0,10)}
+    function setRange(type){const now=new Date(),from=new Date(now);if(type==='today'){}else if(type==='7d')from.setDate(now.getDate()-6);else if(type==='30d')from.setDate(now.getDate()-29);else if(type==='month')from.setDate(1);else if(type==='year'){from.setMonth(0,1)}else return;$('from').value=iso(from);$('to').value=iso(now);loadMembers();}
+    document.querySelectorAll('[data-range]').forEach(b=>b.addEventListener('click',()=>setRange(b.dataset.range)));
+    function params(){const keys=['from','to','country','paymentStatus','plan','accountStatus','verificationStatus','activity','businessCountry','businessStatus','acquisitionSource','sort'];const p={};keys.forEach(k=>{const v=$(k).value;if(v&&v!=='all')p[k]=v;});return p;}
+    async function loadOptions(){try{const out=await BET_API.adminFilterOptions();const fill=(id,rows)=>rows.forEach(x=>{const o=document.createElement('option');o.value=x.value;o.textContent=`${x.value} (${x.count})`;$(id).appendChild(o)});fill('country',out.data.countries||[]);fill('businessCountry',out.data.businessCountries||[]);fill('plan',out.data.plans||[]);fill('acquisitionSource',out.data.acquisitionSources||[]);}catch(e){}}
+    async function loadDashboard(){const p=params();try{const [o,b,d]=await Promise.all([BET_API.adminOverview(p),BET_API.adminBillingSummary(p),BET_API.adminDataSummary(p)]);const x=o.data||{},money=b.data||{},ds=d.data||{};$('metricMembers').textContent=`${x.total_members??0} · +${x.new_members??0}`;$('metricActiveTime').textContent=fmt('active_seconds_30d',x.active_seconds||0);$('metricExperiences').textContent=`${x.experiences_created??0} new`;$('metricMatches').textContent=`${x.questions_created??0} / ${x.qualified_matches??0}`;$('metricPaid').textContent=x.active_subscriptions??0;const cur=money.currency||'';$('metricNet').textContent=money.net_amount_minor?`${(Number(money.net_amount_minor)/100).toLocaleString(undefined,{maximumFractionDigits:2})} ${cur}`:'0';$('opsData').textContent=`Experiences ${ds.experiences_total??0} · Outcomes ${ds.outcomes_total??0} · Questions ${ds.questions_total??0} · Qualified matches ${ds.qualified_matches_total??0} · Live Research open ${ds.live_research_open??0}`;$('opsAttention').textContent=`Verification pending ${ds.verification_pending??0} · Support open ${ds.support_open??0} · Dead jobs ${ds.dead_jobs??0} · Security events ${ds.security_events_period??0}`;}catch(e){}}
+    async function loadMembers(){try{$('filterStatus').textContent='Loading…';const out=await BET_API.adminMembers(params());renderRows(out.data||[]);$('filterStatus').textContent=`Showing ${out.data?.length||0} member(s)`;await loadDashboard();}catch(e){$('filterStatus').textContent='Owner API not connected yet';$('filterStatus').classList.add('cc-error');renderHead();}}
+    $('applyFilters').addEventListener('click',loadMembers);$('clearFilters').addEventListener('click',()=>{document.querySelectorAll('.cc-filters input,.cc-filters select').forEach(el=>{if(el.tagName==='SELECT')el.selectedIndex=0;else el.value=''});loadMembers();});
+    renderHead();setRange('30d');loadOptions();
+  })();
+  </script>
+<script src="consent.js"></script></body>
 </html>
