@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: bet
+          POSTGRES_USER: bet
+          POSTGRES_PASSWORD: bet
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U bet"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm install
+      - run: npm run lint:config
+      - run: npm run check:supabase-migrations
+      - run: npm run typecheck
+      - run: npm run test
+
+      - name: Apply all portable migrations to clean PostgreSQL
+        env:
+          PGPASSWORD: bet
+        run: |
+          set -euo pipefail
+          for migration in db/migrations/*.sql; do
+            echo "Applying $migration"
+            psql -v ON_ERROR_STOP=1 -h localhost -U bet -d bet -f "$migration"
+          done
