@@ -1943,6 +1943,16 @@ Revenue reporting is based on immutable billing events, not only current subscri
 ### Owner filtering v0.3
 The Owner Control Center supports composable filters across time range, signup country, payment/subscription state, plan, account state, verification state, activity cohort, business country/status and first-party acquisition source/campaign. The owner can choose visible columns. User-origin reporting uses coarse country codes; exact IP storage is not required. Payment state is derived from the canonical subscription record rather than duplicated in analytics.
 
-## Public landing visual freeze — 03 Sep 2026
 
-The public BET landing must read as an established global business-intelligence institution, not as an AI/SaaS landing-page template. The public page therefore uses editorial hierarchy, strong typography, ruled sections, restrained spacing and factual product language. Avoid fabricated activity metrics, floating cards, glowing/gradient surfaces, generic feature-card grids, AI iconography, decorative automation cues and over-explaining the technology. AI is infrastructure, not the visual identity. The public page may state that AI structures/retrieves/compares/synthesises, but the primary brand story remains human business experience and decision intelligence.
+## CANONICAL VISUAL LAYOUT LOCK — 03 Sep 2026
+
+**Owner-approved and non-negotiable unless the owner explicitly changes it.**
+
+The file `BET-LAYOUT-CANONICAL.png` is the sole visual reference for the BET public layout. The target implementation must reproduce its visual grammar and composition: ivory background, burgundy BET wordmark/accent, sans-serif hero, ruled editorial structure, left hero statement, right problem-entry module, and lower Experience table. No alternative visual direction may replace it without explicit owner approval.
+
+Core line remains exactly: **See what happened before you decide.** It may not be replaced, paraphrased or demoted without explicit owner approval.
+
+The visual lock does **not** authorize invented product claims, fabricated metrics, fabricated live Experience records, new product features, new navigation semantics or changes to canonical BET behavior. Public knowledge remains account-gated. Illustrative UI content must be explicitly identified as illustrative and must never be presented as live member data.
+
+### Change-control rule
+A previously locked product, copy, UX, data, access, privacy, monetization or visual decision may not be changed merely because a later implementation seems cleaner or more fashionable. Proposed changes must be presented to the owner first and enter the canonical master only after explicit approval. Technical refactors may not alter product semantics.
