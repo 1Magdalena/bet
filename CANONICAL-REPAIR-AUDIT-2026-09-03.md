@@ -56,3 +56,10 @@ The repaired package now includes `BET-LAYOUT-CANONICAL.png` as the sole approve
 
 ## Change control added
 Locked decisions may not be silently optimized in later packages. Any semantic change requires explicit owner approval before entering the canonical master.
+
+## CI repair after first GitHub Actions run
+GitHub Actions exposed two operational issues in sequence:
+1. `.env.example` was absent from the repository upload, causing `npm run lint:config` to fail. The canonical package contains `.env.example`; it remains a required root file.
+2. TypeScript strict checking then exposed `TS18046` in `apps/api/src/http/app.ts` because the Fastify error handler read `error.message` from an `unknown` error value without narrowing. The handler now narrows `statusCode`, `name`, and `message` safely before use. This is a type-safety repair only and does not change BET product logic.
+
+The package also contains `.github/workflows/ci.yml` as the canonical CI workflow. These dot-prefixed files/folders must remain in the repository even if a browser/OS file picker hides them during directory upload.

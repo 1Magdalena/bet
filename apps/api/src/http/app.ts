@@ -27,8 +27,17 @@ export async function buildApp(env:Env,pool:DbPool,authProvider:AuthProvider,ai:
   await app.register(rateLimit,{global:true,max:env.RATE_LIMIT_GLOBAL_MAX,timeWindow:env.RATE_LIMIT_GLOBAL_WINDOW_MS});
   app.setErrorHandler((error,request,reply)=>{
     request.log.error({err:error,requestId:request.id},'request failed');
-    const status=(error as any).statusCode ?? ((error as any).name==='ZodError'?400:500);
-    reply.code(status).send({error:status===500?'internal_error':error.message,requestId:request.id});
+    const statusCode =
+      typeof error === 'object' &&
+      error !== null &&
+      'statusCode' in error &&
+      typeof error.statusCode === 'number'
+        ? error.statusCode
+        : undefined;
+    const errorName = error instanceof Error ? error.name : undefined;
+    const errorMessage = error instanceof Error ? error.message : 'Request failed';
+    const status = statusCode ?? (errorName === 'ZodError' ? 400 : 500);
+    reply.code(status).send({error:status===500?'internal_error':errorMessage,requestId:request.id});
   });
   await registerHealthRoutes(app,pool);
   app.addHook('preHandler',async(request)=>{
