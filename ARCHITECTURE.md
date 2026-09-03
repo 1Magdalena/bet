@@ -1942,3 +1942,7 @@ Revenue reporting is based on immutable billing events, not only current subscri
 
 ### Owner filtering v0.3
 The Owner Control Center supports composable filters across time range, signup country, payment/subscription state, plan, account state, verification state, activity cohort, business country/status and first-party acquisition source/campaign. The owner can choose visible columns. User-origin reporting uses coarse country codes; exact IP storage is not required. Payment state is derived from the canonical subscription record rather than duplicated in analytics.
+
+## Public landing visual freeze — 03 Sep 2026
+
+The public BET landing must read as an established global business-intelligence institution, not as an AI/SaaS landing-page template. The public page therefore uses editorial hierarchy, strong typography, ruled sections, restrained spacing and factual product language. Avoid fabricated activity metrics, floating cards, glowing/gradient surfaces, generic feature-card grids, AI iconography, decorative automation cues and over-explaining the technology. AI is infrastructure, not the visual identity. The public page may state that AI structures/retrieves/compares/synthesises, but the primary brand story remains human business experience and decision intelligence.

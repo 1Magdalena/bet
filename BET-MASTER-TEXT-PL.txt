@@ -1,0 +1,1487 @@
+﻿BET — BUSINESS EXPERIENCE TOGETHER
+MASTER PRODUCT & ARCHITECTURE
+PRE-API FREEZE — 02.09.2026
+
+1. CZYM JEST BET
+
+BET = Business Experience Together.
+
+Kategoria:
+Business Experience Intelligence
+
+Główna obietnica:
+See what happened before you decide.
+
+BET zamienia rzeczywiste doświadczenia przedsiębiorców i firm w ustrukturyzowaną wiedzę pomagającą innym podejmować lepsze decyzje biznesowe.
+
+Podstawowe pytanie, na które odpowiada BET:
+Mam problem albo decyzję biznesową. Co naprawdę wydarzyło się w podobnych firmach, które wcześniej znalazły się w podobnej sytuacji?
+
+BET nie ma mówić przedsiębiorcy, co powinien zrobić.
+Ma pokazać:
+co się wydarzyło → co ktoś zrobił → dlaczego → co wydarzyło się później.
+
+Źródłem wiedzy są ludzie i ich rzeczywiste doświadczenia.
+
+AI odpowiada za:
+strukturę → wyszukiwanie → dopasowanie → porównanie → syntezę.
+
+Zasada:
+The intelligence is powered by AI. The experience is human.
+
+2. DLACZEGO BET ISTNIEJE
+
+Historie biznesowe zwykle kończą się jednym z dwóch komunikatów:
+sukces albo porażka.
+
+Najczęściej ginie jednak najważniejsza część:
+co dokładnie wydarzyło się pomiędzy.
+
+Jaka była sytuacja.
+Jaką decyzję podjęto.
+Co rzeczywiście zrobiono.
+Co się wydarzyło później.
+
+Właśnie ta część doświadczenia może być najbardziej użyteczna dla przedsiębiorcy stojącego przed podobną decyzją.
+
+Publiczny komunikat BET:
+
+The useful part is usually missing.
+
+Business stories tend to end in success or failure. They rarely show what happened in between — the situation, the decision, what was done and what happened next.
+
+That is the part BET records and makes useful.
+
+3. MISJA
+
+Udostępnić rzeczywiste doświadczenie biznesowe w formie, która pozwala wykorzystać je przed podjęciem decyzji, a nie dopiero po fakcie.
+
+Nie tworzymy kolejnej biblioteki porad.
+Tworzymy infrastrukturę doświadczenia biznesowego.
+
+4. CZEGO BET NIE JEST
+
+BET nie jest:
+- LinkedInem,
+- forum,
+- social media,
+- feedem biznesowym,
+- marketplace'em ekspertów,
+- katalogiem konsultantów,
+- portalem z poradami,
+- bazą opinii,
+- narzędziem do self-promotion,
+- platformą reklamową.
+
+Nie ma publicznego katalogu ludzi do przeglądania.
+Nie ma przypadkowego networkingu.
+Nie ma feedu „trending”.
+Nie ma followersów.
+Nie ma lajków.
+Nie ma gwiazdek.
+Nie ma rankingów ludzi.
+Nie ma płatnego boostowania profilu.
+Nie ma sponsorowanych wyników Ask BET.
+Nie ma pay-to-rank.
+Nie ma reklam w Experience Graph.
+
+Zasada:
+No ads. No self-promotion. No pay-to-rank.
+Relevant experience comes first.
+
+Oraz:
+Your business belongs on your profile. Your sales pitch does not belong in your experience.
+
+5. NAJWAŻNIEJSZY ASSET BET
+
+Najważniejszym aktywem i potencjalnym moatem BET nie jest samo AI.
+
+Jest nim:
+EXPERIENCE GRAPH
+
+czyli własna, stale rosnąca baza ustrukturyzowanego rzeczywistego doświadczenia biznesowego.
+
+Architektura wartości:
+EXPERIENCE → INTELLIGENCE → AUTHORITY → NETWORK
+
+6. EXPERIENCE
+
+Użytkownik może opowiedzieć swoje doświadczenie naturalnym językiem — tekstem albo głosem.
+
+BET strukturyzuje je mniej więcej jako:
+
+FIRMA / KONTEKST
+↓
+SYTUACJA / PROBLEM
+↓
+DECYZJA
+↓
+DZIAŁANIE
+↓
+CO WYDARZYŁO SIĘ PÓŹNIEJ
+↓
+OUTCOME / DALSZY ROZWÓJ
+
+Nie wymagamy historii sukcesu.
+
+Wartościowe są również:
+- porażki,
+- częściowe sukcesy,
+- decyzje odwrócone,
+- brak efektu,
+- działania przerwane,
+- sytuacje nierozwiązane,
+- decyzje, których ostatecznie nie wdrożono.
+
+7. JEDNO DOŚWIADCZENIE = JEDEN REKORD
+
+Każda odrębna sytuacja biznesowa jest osobnym ExperienceRecord.
+
+Nie wrzucamy całej historii przedsiębiorcy do jednego gigantycznego pola.
+
+Każde Experience ma własną kartę i własny rekord.
+
+8. ŹRÓDŁO I WIERNOŚĆ
+
+AI nie może poprawiać rzeczywistości użytkownika.
+
+Dla głosu zachowujemy:
+
+Original audio
+↓
+Original machine transcript
+↓
+User-approved transcript
+
+Użytkownik może poprawić transkrypcję.
+
+BET nie wymyśla:
+- liczb,
+- przychodów,
+- dat,
+- rezultatów,
+- przyczyn,
+- intencji.
+
+Jeżeli doświadczenie jest zbyt niejasne, BET może zadać jedno konkretne pytanie uzupełniające.
+
+9. BUSINESS CONTEXT
+
+Użytkownik może powiedzieć BET więcej o swojej firmie.
+
+Informacje są historyczne i addytywne.
+Nie nadpisujemy starego obrazu firmy nowym.
+
+Pochodzenie informacji oznaczamy jako:
+Verified
+Member-reported
+BET-structured
+Derived
+
+AI nie może przedstawiać informacji zgłoszonej przez użytkownika jako niezależnie zweryfikowanego faktu.
+
+10. BUSINESS SNAPSHOTS
+
+Firma posiada historyczne snapshoty.
+
+Mogą zawierać m.in.:
+- branżę,
+- model biznesowy,
+- liczbę pracowników,
+- rynki,
+- etap rozwoju,
+- revenue band,
+- profitability state.
+
+Revenue bands:
+<100k
+100–250k
+250–500k
+500k–1M
+1–2.5M
+2.5–5M
+5–10M
+10–25M
+25–50M
+50M+
+
+Financial state:
+Strongly profitable
+Profitable
+Around break-even
+Moderate loss
+Significant loss
+
+BET może okresowo zapytać:
+Has anything important changed since your last snapshot?
+
+11. WIELE FIRM
+
+Jedno konto Member może posiadać wiele rzeczywiście powiązanych/zweryfikowanych firm.
+
+Jedna subskrypcja obejmuje wszystkie firmy użytkownika.
+
+Firma może być:
+- current,
+- former,
+- sold,
+- closed.
+
+Dane firm są od siebie logicznie izolowane.
+
+Użytkownik przełącza aktywną firmę.
+
+Ask BET zawsze pokazuje, dla której firmy aktualnie pracuje.
+
+Portfolio View może powstać później.
+
+12. HOME
+
+Po zalogowaniu Home nie jest klasycznym dashboardem.
+
+Centralnym elementem jest:
+
+What are you dealing with today?
+
+Pod spodem:
+pole tekstowe / głosowe do opisania:
+- problemu,
+- decyzji,
+- sytuacji,
+- możliwości.
+
+CTA:
+Ask BET
+
+Home może dodatkowo dyskretnie pokazywać:
+- active questions,
+- new matches,
+- Continue Journey.
+
+Nie ma tam:
+- feedu,
+- trendów,
+- vanity metrics,
+- marketingowej historii BET,
+- wielkich bloków informacyjnych.
+
+Home ma prowadzić do działania.
+
+13. NAWIGACJA
+
+Podstawowa nawigacja:
+Home
+My Business
+My Network
+Notes
+
+Niżej:
+Help & Guide
+Technical Support
+
+W prawym górnym rogu:
+Notifications
+Account / avatar
+
+Ask BET nie jest osobną pozycją głównej nawigacji, ponieważ Home jest wejściem do Ask BET.
+
+14. MY BUSINESS
+
+Zakładki:
+Journey
+Experiences
+Questions
+Business Profile
+
+15. BUSINESS JOURNEY
+
+BET buduje historię firmy:
+
+Problem
+↓
+Relevant evidence / people
+↓
+Decision
+↓
+Action
+↓
+Outcome observations
+↓
+Current state
+↓
+Next Problem
+
+Użytkownik może zaznaczyć Experience lub rozmowę jako informację, która wpłynęła na decyzję.
+
+BET nie może jednak automatycznie twierdzić, że konkretne Experience spowodowało wynik.
+
+16. OUTCOME FOLLOW-UP
+
+Jeżeli rezultat decyzji nie jest znany, BET może wracać do użytkownika mniej więcej po:
+1 miesiącu
+3 miesiącach
+12 miesiącach
+
+Nie musi pytać, jeśli outcome został już zapisany.
+
+17. ASK BET
+
+Pipeline:
+
+Query
+↓
+Query understanding
+↓
+QueryProfile
+↓
+Business DNA
+↓
+Decision DNA
+↓
+Retrieval
+↓
+Candidate cohort
+↓
+Reranking
+↓
+Quality threshold
+↓
+EvidencePack
+↓
+Grounded synthesis
+↓
+Source traceability
+↓
+Feedback
+
+Lexical similarity sama w sobie nie wystarcza.
+
+18. ZASADA MATCH QUALITY
+
+Match jest wielowymiarowy i zależny od pytania.
+
+System może posiadać wewnętrzny score.
+
+Użytkownik nie widzi procentu dopasowania.
+
+Zamiast tego widzi konkretne:
+Why this matches
+
+Najważniejsza zasada:
+If it is not sufficiently relevant, it is not a match.
+
+0 matches jest prawidłowym wynikiem.
+
+BET nie pokazuje słabego dopasowania tylko po to, żeby coś pokazać.
+
+19. OPEN DECISION / QUESTION
+
+Problem użytkownika jest private by default.
+
+Lifecycle:
+draft → active → closed → reopened
+
+Po zamknięciu problemu:
+- zatrzymujemy proactive matching,
+- zatrzymujemy związane z nim powiadomienia.
+
+Po reopen matching może zostać wznowiony.
+
+20. CONTEXT RE-MATCHING
+
+Jeżeli później do BET dojdzie nowe Experience, może ono zostać porównane z wcześniejszymi aktywnymi problemami.
+
+Jeżeli powstanie rzeczywiście wartościowy match, użytkownik otrzymuje powiadomienie.
+
+Nie wysyłamy:
+Someone similar joined BET.
+
+Powiadamiamy dopiero wtedy, gdy istnieje konkretna wartość.
+
+21. LIVE RESEARCH
+
+Jeżeli Ask BET nie znajduje wystarczającego Experience:
+
+1. wyszukuje niewielką grupę prawdopodobnych posiadaczy doświadczenia;
+2. pyta: Have you experienced this?
+3. No poprawia przyszłą selekcję;
+4. Yes oznacza potencjalnego posiadacza Experience — jeszcze nie match;
+5. użytkownik opisuje doświadczenie;
+6. BET je strukturyzuje;
+7. system ocenia jakość i dopasowanie;
+8. dopiero po przekroczeniu threshold powstaje match;
+9. asker otrzymuje powiadomienie;
+10. Experience może później służyć kolejnym problemom zgodnie z permissions/lifecycle.
+
+Flywheel:
+Question → Missing Experience → Targeted Capture → New Experience → Match → Reusable Evidence
+
+22. NETWORK
+
+Każda relacja w BET zaczyna się od konkretnego problemu biznesowego.
+
+Nie ma:
+- directory ludzi,
+- cold messaging,
+- losowego networkingu,
+- grup dyskusyjnych bez kontekstu,
+- sprzedażowego outreachu.
+
+Qualified match może umożliwić:
+- problem-bound 1:1,
+- osobne rozmowy z kilkoma matched people,
+- Group Discussion dla osób z tego samego MatchPool.
+
+Zaproszona osoba może:
+Accept / Decline
+
+Rozmowa pozostaje związana z konkretnym problemem.
+
+Jeżeli temat zmienia się w zupełnie inny problem:
+Topic Guard → new Ask BET
+
+Kontakt poza BET jest dozwolony.
+
+23. MY NETWORK
+
+My Network jest pamięcią wartościowych relacji powstałych przez rzeczywiste problemy.
+
+Nie oznacza nieograniczonego prawa do pisania do każdego w dowolnym celu.
+
+24. AUTHORITY
+
+Nie ma:
+- gwiazdek,
+- leveli,
+- XP,
+- leaderboardów.
+
+Authority mierzymy liczbą odrębnych problemów biznesowych, w których Experience zostało oznaczone przez innego użytkownika jako pomocne.
+
+Przykład:
+Experience helpful in 77 business problems
+
+Nie piszemy:
+Solved 77 problems.
+
+25. PROFILE / ANONYMITY
+
+BET może znać:
+- prawdziwą tożsamość,
+- firmę,
+- stanowisko,
+- okres pracy,
+- inne potrzebne dane weryfikacyjne.
+
+Nie oznacza to, że wszystko musi być widoczne dla innych użytkowników.
+
+Rozdzielamy:
+BET KNOWLEDGE
+od
+MATCH CARD
+od
+MEMBER PROFILE
+
+Można ukryć:
+- nazwisko,
+- nazwę firmy,
+- zdjęcie,
+- linki,
+- wrażliwe szczegóły.
+
+Zasada:
+Hidden from humans ≠ unknown to BET.
+
+26. PRIVATE NOTES
+
+Notes są prywatnym workspace użytkownika.
+
+BET Intelligence NIE MA DO NICH DOSTĘPU.
+
+Nie są:
+- embeddingowane,
+- indeksowane,
+- używane do matching,
+- używane do training,
+- analizowane przez Ask BET.
+
+Również Owner/Admin nie widzi treści Private Notes.
+
+Jeżeli użytkownik wybierze:
+Use in BET
+
+powstaje osobna submitted copy.
+
+Oryginalna notatka pozostaje prywatna.
+
+27. NOTIFICATIONS
+
+Powiadamiamy tylko o rzeczach mających konkretną wartość:
+
+1. New qualified match for your question
+2. You're a match for a business problem
+3. You may have relevant experience — Live Research
+4. wiadomość/invitation związana z problemem
+5. potrzebny outcome follow-up.
+
+Nie wysyłamy engagement spamu.
+
+28. SUPPORT
+
+Support AI służy wyłącznie do:
+- obsługi technicznej,
+- wyjaśnienia interfejsu,
+- statusów,
+- ustawień,
+- visibility,
+- troubleshooting.
+
+Support nie odpowiada na pytania biznesowe.
+
+Nie korzysta z Experience Graph jako Ask BET.
+
+Nie czyta Private Notes.
+
+Nierozwiązany problem może zostać eskalowany do człowieka/admina.
+
+29. ONBOARDING
+
+Pierwsze wejście:
+krótkie, możliwe do pominięcia.
+
+Status:
+not_started
+completed
+skipped
+
+Wyjaśnia:
+- czym jest BET,
+- co warto opisywać,
+- jak działa Experience,
+- voice,
+- prywatność,
+- dlaczego kontekst poprawia matching.
+
+Po konfiguracji firmy BET może zaprosić użytkownika do dodania 2–3 znaczących sytuacji z przeszłości.
+
+Nie jest to obowiązkowe do ukończenia konta.
+
+30. PLACEHOLDERS
+
+Każde istotne pole tekstowe posiada realistyczny przykład.
+
+Placeholder:
+- znika podczas pisania,
+- nie trafia do Experience Graph,
+- nie trafia do embeddings,
+- nie jest evidence.
+
+Przykłady mogą pokazywać:
+- kwoty,
+- procenty,
+- zakresy,
+- czas,
+- przybliżone daty.
+
+Ale użytkownik nie jest zmuszany do podawania dokładnych liczb.
+
+31. FREE LAUNCH
+
+Początkowo wybrani/zweryfikowani użytkownicy otrzymują pełny dostęp do core BET bez opłat.
+
+Nie stosujemy widocznego sztucznego limitu normalnych Ask BET tylko po to, żeby ograniczać użycie.
+
+Quality gate > quantity gate.
+
+Live Research jest throttled.
+
+32. PRZYSZŁY FREE / PAID
+
+Free może docelowo:
+- posiadać profil,
+- prowadzić firmę,
+- dodawać Experience,
+- prowadzić Journey,
+- zadawać problem,
+- zobaczyć, że istnieją qualified matches.
+
+Free nie otrzymuje pełnej collective intelligence.
+
+Może zobaczyć np.:
+3 relevant experiences found
+
+ale nie:
+- nazwiska,
+- profile,
+- snippets,
+- pełną synthesis,
+- source details.
+
+Jeżeli wynik = 0:
+nie wyświetlamy presji na upgrade.
+
+33. PAID
+
+Hipoteza cenowa, nie finalna:
+około $99/month
+lub $990/year
+
+Jedna subskrypcja obejmuje wszystkie firmy użytkownika.
+
+Cancel → Free.
+
+Nie kasujemy historii tylko dlatego, że ktoś anulował abonament.
+
+34. ENTITLEMENTS
+
+Centralny system uprawnień:
+contribute_experience
+manage_own_journey
+publish_open_decision
+receive_problem_matches
+member_contact
+collective_discovery
+ask_bet_intelligence
+source_drilldown
+live_research
+behavioral_patterns
+
+Launch full access może być nadawany przez EntitlementGrant.
+
+35. PAYMENT SAFETY
+
+Mechanizm istnieje architektonicznie, ale podczas darmowego launchu:
+payment_safety_messaging = false
+
+Po uruchomieniu płatności:
+oficjalne opłaty tylko przez oficjalny flow BET.
+
+Nie płaci się innym użytkownikom:
+- na prywatne konto,
+- crypto,
+- gift cards,
+- nieoficjalne linki
+
+w celu odblokowania funkcji objętych BET.
+
+Podejrzane działania → Report suspicious activity / Technical Support.
+
+36. OWNER CONTROL CENTER
+
+BET posiada osobny panel właścicielski/admina.
+
+To nie jest Home użytkownika.
+
+Jest to centrum zarządzania firmą i produktem.
+
+37. OWNER — OVERVIEW
+
+Widzisz m.in.:
+- total members,
+- new members,
+- active members,
+- returning members,
+- businesses,
+- Experiences,
+- Questions,
+- qualified matches,
+- zero-match problems,
+- Live Research,
+- conversations,
+- support,
+- verification,
+- active time,
+- sessions.
+
+38. GLOBALNY FILTR CZASU
+
+Owner Dashboard posiada wybór:
+Today
+7D
+30D
+Month
+Year
+Custom range
+
+Dane historyczne można analizować:
+- dzień po dniu,
+- miesiąc po miesiącu,
+- rok po roku,
+- dla dowolnego zakresu.
+
+Możliwe jest porównanie do poprzedniego analogicznego okresu.
+
+39. OWNER — USERS
+
+Możesz zobaczyć użytkowników i filtrować ich m.in. według:
+- Member ID,
+- signup date,
+- signup country,
+- business country,
+- Free / Paid,
+- plan,
+- subscription status,
+- verification status,
+- account status,
+- acquisition source,
+- last activity,
+- activity period.
+
+Możesz wybierać widoczne kolumny.
+
+Np.:
+USA + Paid + active last 30 days
+albo:
+Poland + Free + registered this month
+
+40. SIGNUP COUNTRY
+
+BET zapisuje kraj rejestracji jako osobne pole od kraju firmy.
+
+Nie potrzebujemy przechowywać pełnego IP tylko po to, aby znać kraj.
+
+Możemy przechowywać np.:
+PL
+US
+DE
+GB
+
+41. OWNER — USER ACTIVITY
+
+Możesz widzieć m.in.:
+- signup date,
+- last active,
+- session count,
+- active days,
+- active time today,
+- active time 7D,
+- active time 30D,
+- average session duration,
+- Experiences count,
+- Questions count,
+- matches count,
+- conversations count.
+
+Mierzymy active time, nie czas pozostawienia otwartej karty.
+
+Idle timeout zatrzymuje naliczanie.
+
+Nie zapisujemy:
+- keystrokes,
+- treści pisanych przed wysłaniem,
+- Private Notes,
+- niepotrzebnych payloadów.
+
+42. MEMBER ID
+
+Każdy użytkownik posiada wewnętrzny Member ID.
+
+Owner Dashboard nie musi pokazywać pełnej treści wszystkich jego pytań.
+
+Jeżeli potrzebujesz konkretnego przypadku, możesz wejść po Member ID do odpowiednich danych.
+
+Dashboard ma służyć zarządzaniu firmą, nie być automatycznym podglądem całej prywatnej aktywności.
+
+43. OWNER — PRODUCT / DATA
+
+Możesz widzieć m.in.:
+- liczbę rekordów,
+- wzrost Experience Graph,
+- Experiences created,
+- active Questions,
+- closed Questions,
+- 0-match Questions,
+- qualified matches,
+- Live Research states,
+- outcome completion,
+- conversations originating from matches.
+
+Każda liczba może prowadzić do odpowiedniego zestawu rekordów.
+
+44. OWNER — OPERATIONS
+
+Panel może pokazywać:
+- pending verification,
+- Support escalations,
+- failed jobs,
+- dead jobs,
+- security events,
+- provider errors,
+- backup status,
+- restore-test status,
+- system health.
+
+45. OWNER — SUBSCRIPTIONS / REVENUE
+
+Moduł aktywuje się wraz z płatnościami.
+
+Widzisz:
+- Free users,
+- Paid users,
+- active subscriptions,
+- new subscriptions,
+- cancellations,
+- Free → Paid,
+- churn,
+- MRR,
+- ARR,
+- revenue,
+- collected payments,
+- refunds,
+- payment provider fees,
+- net collected revenue,
+- ARPPU/ARPU zależnie od metryki.
+
+Dane dostępne dla:
+day / month / year / custom range.
+
+46. BILLING LEDGER
+
+Finanse bazują na deduplikowanym ledgerze.
+
+Jedna rzeczywista płatność nie może zostać policzona kilka razy tylko dlatego, że provider wysłał kilka eventów webhook.
+
+Rozdzielamy:
+- invoiced,
+- collected,
+- refunded,
+- provider fee,
+- net collected.
+
+47. ADMIN SECURITY
+
+Owner/Admin ma osobne, server-authorized uprawnienia.
+
+MFA obowiązkowe dla owner/admin przed realnym uruchomieniem.
+
+Wrażliwe akcje administracyjne tworzą AdminAuditEvent.
+
+Admin nie dostaje automatycznie nieograniczonego dostępu do wszystkiego.
+
+Szczególnie:
+Private Notes pozostają niedostępne.
+
+48. COOKIES / CONSENT
+
+BET obsługuje:
+Strictly necessary
+oraz osobno:
+Analytics / Product analytics
+
+Publiczna strona ma dyskretny consent interface:
+Accept all
+Reject non-essential
+Manage preferences
+
+Użytkownik może później zmienić decyzję.
+
+Consent jest przechowywany i wersjonowany.
+
+Telemetryka wymagająca consentu nie może być oznaczana jako consented bez rzeczywistej zgody.
+
+49. SERVER-SIDE PRODUCT EVENTS
+
+Owner Dashboard nie zależy wyłącznie od cookies.
+
+Normalne zdarzenia systemowe mogą obejmować np.:
+- account created,
+- login,
+- Experience submitted,
+- Question created,
+- Match generated,
+- conversation created,
+- subscription activated.
+
+Browser analytics i active-time telemetry są traktowane zgodnie z odpowiednimi zasadami consent/privacy.
+
+50. ACCOUNT LIFECYCLE
+
+Cancel ≠ Delete
+
+Cancel Paid:
+→ użytkownik przechodzi do Free.
+
+Historia pozostaje.
+
+Możliwy później:
+Hibernate
+
+Permanent Delete jest osobną operacją.
+
+Rozróżniamy:
+Personal Account Data
+Contributed Knowledge
+Shared Interaction History
+
+51. EXPERIENCE EDIT / WITHDRAW
+
+Experience można:
+Edit
+Delete / Withdraw
+
+Posiada:
+- stable logical ID,
+- versions,
+- status.
+
+Retrieval używa tylko aktualnej aktywnej wersji.
+
+Material edit → reindex.
+
+EvidencePack wskazuje dokładną wersję Experience.
+
+Withdraw → brak przyszłego użycia.
+
+52. SECURITY
+
+Podstawowe zasady:
+- server-side authentication,
+- server-side authorization,
+- deny by default,
+- object-level authorization,
+- RLS tam, gdzie właściwe,
+- admin separation,
+- MFA,
+- secrets server-side only,
+- environment separation,
+- rate limiting,
+- private object storage,
+- signed URLs,
+- upload validation,
+- TLS,
+- encryption,
+- minimum data sent to AI,
+- AI cannot authorize,
+- anti-exfiltration controls,
+- audit logs,
+- security events,
+- dependency scanning,
+- backups,
+- restore tests,
+- WAF/edge protection,
+- external security review przed większą płatną skalą.
+
+Benchmark:
+OWASP ASVS
+
+53. DATA DOMAINS
+
+Rozdzielamy logicznie:
+Identity / Verification Vault
+Experience Graph
+Member-visible layer
+Private Notes Vault
+
+54. BACKUPS
+
+Przed closed beta:
+- managed daily DB backup,
+- niezależny encrypted export według harmonogramu,
+- restore test.
+
+Restore test powtarzamy po istotnych zmianach infrastruktury.
+
+55. ARCHITEKTURA TECHNICZNA
+
+Zasada:
+Build small. Architect large.
+
+v0.1:
+modular monolith
+
+Nie budujemy mikroserwisów bez potrzeby.
+
+Moduły:
+- auth/identity,
+- verification,
+- business/context,
+- Experience/Journey,
+- Ask BET/problems,
+- retrieval/indexing,
+- AI orchestration,
+- matching/Live Research,
+- network/messaging,
+- notifications,
+- Private Notes,
+- entitlements/billing,
+- lifecycle/privacy,
+- support,
+- admin,
+- security,
+- telemetry.
+
+56. BACKEND
+
+TypeScript.
+Fastify.
+PostgreSQL.
+Zod.
+JOSE.
+
+Provider boundaries dla:
+- Auth,
+- AI,
+- Storage,
+- Transcription,
+- Email,
+- Payments.
+
+Frontend komunikuje się przede wszystkim z BET-owned API.
+
+Nie udostępniamy Experience Graph bezpośrednio przeglądarce.
+
+57. DATABASE
+
+Canonical database:
+PostgreSQL-compatible SQL
+
+Pierwszy provider:
+Supabase
+
+Supabase daje na start:
+- PostgreSQL,
+- Auth,
+- Storage,
+- RLS,
+- Data API.
+
+Architektura pozostaje możliwie przenośna.
+
+58. OBECNY CORE DATABASE
+
+Model obejmuje m.in.:
+members
+businesses
+member_business_roles
+verification_cases
+business_snapshots
+business_context_entries
+media_assets
+voice_captures
+transcript_versions
+experience_records
+experience_versions
+outcome_observations
+decision_episodes
+journey_events
+ask_queries
+open_decision_records
+retrieval_runs
+problem_matches
+evidence_packs
+evidence_items
+synthesis_claims
+live_research_requests
+live_research_candidates
+conversations
+conversation_participants
+messages
+network_relationships
+feedback_events
+private_notes
+private_note_references
+submitted_note_copies
+notifications
+notification_preferences
+support_tickets
+plans
+subscriptions
+entitlements
+entitlement_grants
+feature_flags
+data_deletion_requests
+retention_choices
+audit_events
+security_events
+job_queue
+outbox_events
+
+oraz telemetrykę, consent, owner analytics i billing ledger dodane w późniejszych migracjach.
+
+59. SUPABASE MIGRATIONS
+
+W obecnym PRE-API Freeze:
+0001_core.sql
+0002_functions.sql
+0003_rls.sql
+oraz nowe:
+0004 — Owner analytics / consent / billing foundations
+0005 — member origin / admin filters
+0006 — Owner analytics RLS
+
+Pierwsze trzy zostały już wykonane w projekcie Supabase.
+
+0004–0006 mają zostać wykonane po potwierdzeniu aktualnego repo/CI.
+
+60. RLS
+
+Supabase RLS nie zakłada:
+members.id == auth.uid()
+
+Tożsamość Supabase jest mapowana przez:
+members.auth_subject
+
+i helper:
+bet_current_member_id()
+
+To rozwiązuje BET Member ID na podstawie authenticated subject.
+
+61. JOB QUEUE
+
+PostgreSQL job queue.
+
+Mechanizmy:
+- durable jobs,
+- retry,
+- backoff,
+- dead state,
+- SKIP LOCKED,
+- idempotency.
+
+62. AI PROVIDER
+
+AI jest provider abstraction.
+
+BET nie jest uzależniony koncepcyjnie od jednego modelu.
+
+AI otrzymuje tylko dane potrzebne do wykonania konkretnego zadania.
+
+AI nie podejmuje decyzji autoryzacyjnych.
+
+63. STORAGE
+
+Media/audio przechowywane prywatnie.
+
+Dostęp przez kontrolowane/signed URLs.
+
+Nie tworzymy publicznych permanentnych URL-i do prywatnych plików użytkowników.
+
+64. EMAIL
+
+Email jest początkowym kanałem powiadomień poza platformą.
+
+Nie wysyłamy engagement spamu.
+
+Email dotyczy wartościowych zdarzeń BET.
+
+65. DESIGN BET
+
+BET ma wyglądać:
+- premium,
+- spokojnie,
+- instytucjonalnie,
+- inteligentnie,
+- editorial/data-driven.
+
+Inspiracja charakterem:
+private banking / strategy intelligence / Financial Times / institutional BI.
+
+Paleta bazowa:
+- burgundy,
+- beige,
+- ivory.
+
+Gender-neutral.
+Niski visual fatigue.
+
+66. BET NIE MOŻE WYGLĄDAĆ JAK „AI GENERATED”
+
+Nie używamy typowych klisz AI/SaaS:
+- świecących gradientów,
+- neonowych glow,
+- robotów,
+- ✨,
+- gigantycznych AI cards,
+- przypadkowych ilustracji,
+- przesadnie rounded UI,
+- generycznych startupowych layoutów.
+
+AI działa pod spodem.
+Marka nie ma krzyczeć „AI”.
+
+67. COPY NIE MOŻE BRZMIEĆ JAK AI
+
+Ta sama zasada dotyczy treści.
+
+Unikamy:
+- unlock,
+- empower,
+- revolutionize,
+- transform your business,
+- pustych superlatyw,
+- trzech synonimów tego samego,
+- przesadnie perfekcyjnych marketingowych zdań,
+- schematycznego Whether you're X, Y or Z...,
+- niepotrzebnego powtarzania tej samej idei pod kilkoma nagłówkami.
+
+Copy ma być:
+krótkie, konkretne, redakcyjne, świadome.
+
+Ma brzmieć jak tekst firmy, która dokładnie wie, dlaczego istnieje.
+
+68. PUBLIC WEBSITE
+
+Publiczna strona ma szybko wyjaśniać wartość BET.
+
+Główne:
+See what happened before you decide.
+
+Supporting idea:
+Put the experience of thousands of businesses to work for yours.
+
+Następnie krótko:
+The useful part is usually missing.
+
+oraz:
+No ads. No self-promotion. No pay-to-rank.
+
+Nie robimy wielkiej strony Our Mission.
+
+Misja wynika z problemu, który BET rozwiązuje.
+
+69. ACCOUNT-GATED KNOWLEDGE
+
+Collective Experience Graph nie jest publiczną stroną internetową.
+
+Dostęp do właściwej wiedzy BET wymaga konta i odpowiednich entitlementów.
+
+Publiczna strona pokazuje czym jest BET, nie udostępnia całej bazy.
+
+70. MARKET POSITION
+
+Najbliższe pewnym elementom BET są m.in.:
+- expert networks,
+- business intelligence/research,
+- founder communities,
+- knowledge platforms.
+
+Ale BET łączy inny ciąg:
+concrete business problem
+↓
+structurally relevant lived experience
+↓
+what they actually did
+↓
+what happened afterward
+↓
+relevant people
+↓
+Live Research if evidence is missing
+
+71. NAJWIĘKSZE RYZYKO
+
+Największym ryzykiem początkowym nie jest technologia.
+
+Jest nim:
+cold start / density of useful Experience.
+
+Następnie:
+- jakość Experience,
+- jakość matching,
+- garbage in,
+- zbyt szerokie dopasowania.
+
+Dlatego BET nie może kompensować braku danych słabymi matchami.
+
+72. WALIDACJA PRODUKTU
+
+Pierwsza closed beta:
+około 10–20 przedsiębiorców.
+
+Sprawdzamy przede wszystkim:
+czy pierwsze Experience dają użytkownikowi wartość, której nie dostałby równie łatwo z:
+- Google,
+- zwykłego ChatGPT,
+- przypadkowego znajomego,
+- forum.
+
+Potem:
+50–100 użytkowników
+
+i zwiększanie density Experience Graph.
+
+73. PRZED CLOSED BETA POTRZEBUJEMY
+
+Realnie działających:
+- registration/login,
+- auth,
+- persistence,
+- business setup,
+- separate Experiences,
+- voice/text capture,
+- Ask BET na rzeczywistych danych,
+- Questions,
+- matches,
+- notifications,
+- admin/verification,
+- support,
+- transactional email,
+- backup,
+- security,
+- privacy/consent.
+
+74. LEGAL / PRIVACY
+
+Nie trzeba mieć spółki tylko po to, żeby pisać kod BET.
+
+Natomiast przed wpuszczeniem zewnętrznych użytkowników przetwarzających rzeczywiste dane potrzebujemy m.in.:
+- określonego data controllera,
+- Privacy Policy,
+- Terms,
+- odpowiednich podstaw przetwarzania,
+- cookie/consent disclosures.
+
+Przed płatnościami dodatkowo:
+- podmiot rozliczający,
+- billing/tax setup,
+- payment provider,
+- payout account,
+- billing disclosures.
+
+75. OWNER ACTIONS
+
+Rzeczy wymagające Twojej autoryzacji wykonujemy wtedy, kiedy będą potrzebne:
+- Supabase — utworzone,
+- GitHub — utworzony,
+- Netlify — utworzony,
+- MFA,
+- domena/DNS,
+- AI provider,
+- email provider,
+- payment provider,
+- billing,
+- legal identity/controller,
+- Terms/Privacy.
+
+Sekretów nie umieszczamy:
+- w GitHubie,
+- w publicznym JS,
+- w rozmowie,
+- w repo.
+
+76. AKTUALNY STAN TECHNICZNY
+
+GitHub:
+1Magdalena/bet
+
+branch:
+main
+
+Supabase:
+projekt BET
+
+Database schema 0001–0003 została wykonana.
+
+Data API jest włączone.
+
+Publishable key jest przeznaczony do odpowiedniego użycia po stronie klienta.
+
+Secret/service credentials pozostają server-side.
+
+Netlify:
+bet-preview
+
+jest podpięty do repo jako preview.
+
+77. AKTUALNY PROBLEM DO ROZWIĄZANIA
+
+Najnowszy PRE-API Freeze został wrzucony do GitHub.
+
+Na ekranie repo nie było widocznego:
+.github
+
+przez co GitHub nie wykrył przygotowanego workflow CI i w Actions pokazał jedynie propozycje stworzenia nowego workflow.
+
+Przed dalszym etapem trzeba upewnić się, że:
+.github/workflows/...
+rzeczywiście znajduje się w repo.
+
+78. TESTY
+
+Lokalna instalacja zależności npm dwukrotnie przekroczyła limit czasu środowiska.
+
+Dlatego pełnego:
+TypeScript typecheck + test
+
+nie oznaczamy jako zaliczonego.
+
+Przeszły dostępne kontrole m.in.:
+- struktury paczki,
+- synchronizacji migracji,
+- konfiguracji,
+- składni JS,
+- integralności ZIP.
+
+Pełny test ma zostać wykonany przez CI/GitHub Actions.
+
+Jeżeli CI jest czerwone:
+nie przechodzimy dalej, tylko naprawiamy błąd.
+
+79. KOLEJNOŚĆ OD TEGO MOMENTU
+
+1. Doprowadzić aktualne repo GitHub do kompletnego stanu wraz z .github/workflows.
+2. Uruchomić CI.
+3. Naprawić wszystko, co CI ewentualnie znajdzie.
+4. Wykonać Supabase 0004.
+5. Wykonać 0005.
+6. Wykonać 0006.
+7. Zweryfikować schema/RLS.
+8. Skonfigurować potrzebne environment variables.
+9. Podłączyć Auth.
+10. Podłączyć BET API do Supabase.
+11. Podłączyć frontend do prawdziwego API.
+12. Następnie Storage / voice / AI / email itd.
+13. Testować pełne flows przed closed beta.
+
+80. ZASADY, KTÓRYCH NIE ZMIENIAMY PRZYPADKIEM
+
+1. Knowledge jest account-gated.
+2. Źródłem Experience jest człowiek.
+3. AI strukturyzuje i tworzy intelligence, ale nie wymyśla źródłowych faktów.
+4. Questions są private by default.
+5. Słabych matchy nie pokazujemy.
+6. Nie pokazujemy match percentage.
+7. Zero match jest prawidłowym wynikiem.
+8. Aktywne nierozwiązane problemy mogą być rematchowane.
+9. Live Research trafia tylko do plausibly relevant cohort.
+10. Yes w Live Research nie oznacza automatycznie match.
+11. Conversations są problem-bound.
+12. My Network nie daje unrestricted messaging.
+13. Off-platform contact jest dozwolony.
+14. Track Person/Business/Experience jest usunięty.
+15. Authority liczy distinct helpful business problems.
+16. Private Notes są niedostępne dla BET Intelligence i Owner/Admin.
+17. Free launch nie ma sztucznego widocznego normal-query quota.
+18. Future Free widzi availability, nie collective knowledge.
+19. Zero wartości = zero upgrade pressure.
+20. Notifications tylko dla rzeczywistych wartościowych zdarzeń.
+21. Edit/withdraw invaliduje stale source.
+22. EvidencePack wskazuje exact Experience version.
+23. Cancel ≠ Delete.
+24. Delete ma transparent lifecycle.
+25. Build small, architect large.
+26. Każde Experience jest osobnym rekordem.
+27. Support AI jest techniczny, nie biznesowy.
+28. Owner security actions są jawnie wskazywane, kiedy są potrzebne.
+29. Payment-safety istnieje, ale podczas free launch jest wyłączone.
+30. Home = What are you dealing with today?
+31. Owner Dashboard jest osobnym centrum zarządzania BET.
+32. Owner widzi użytkowników, kraje, aktywność, dane produktu, operacje i później finanse.
+33. Owner Dashboard posiada zakresy dat i filtry.
+34. Active time ≠ otwarta karta.
+35. Consent musi być rzeczywisty.
+36. Signup country ≠ business country.
+37. Billing nie może podwójnie liczyć tego samego pieniądza.
+38. No ads.
+39. No self-promotion.
+40. No pay-to-rank.
+41. BET nie może wyglądać jak AI-generated.
+42. BET nie może również brzmieć jak AI-generated.
+
+BET
+Business Experience Together
+Business Experience Intelligence
+
+See what happened before you decide.
+
+The experience is human. The intelligence is powered by AI.
